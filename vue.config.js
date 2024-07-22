@@ -1,5 +1,6 @@
 module.exports = {
   publicPath: './',
+  outputDir: 'website',
   css: {
     extract: false,
     loaderOptions: {
