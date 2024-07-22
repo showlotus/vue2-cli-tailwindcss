@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
-    <div class="bg-red-500 font-bold text-white p-4">123</div>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="flex flex-col justify-center items-center">
+    <img alt="Vue logo" src="./assets/logo.png" class="w-60" />
+    <div class="bg-green-500 font-bold text-white p-4 rounded w-40">123</div>
+    <HelloWorld v-if="0" msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
@@ -12,8 +12,8 @@ import HelloWorld from './components/HelloWorld.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    HelloWorld,
+  },
 }
 </script>
 
