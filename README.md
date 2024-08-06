@@ -1,24 +1,58 @@
-# vue2
+# Use TailwindCSS in Vue Cli with Vue2
 
-## Project setup
-```
-npm install
-```
+[Reference](https://blog.csdn.net/zqd_java/article/details/136568490)
 
-### Compiles and hot-reloads for development
+## Install
+
 ```
-npm run serve
+npm install -D autoprefixer@^9 postcss@^7 tailwindcss@npm:@tailwindcss/postcss7-compat
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+## Config
+
+新建 `style.css` 文件
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 ```
 
-### Lints and fixes files
-```
-npm run lint
+在项目入口文件（例如：`main.js` ）中引入 `style.css`
+
+```js
+import 'style.css'
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+创建配置文件
+
+```shell
+npx tailwindcss init
+```
+
+根据项目修改配置
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  // 根据自己项目来定，可能是 ./src/**/*.{js,ts,jsx,tsx}
+  purge: ['./src/*.{js,jsx,vue}', './public/index.html'],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {},
+  },
+  variants: {},
+  plugins: [],
+}
+```
+
+添加 `postcss.config.js`
+
+```js
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+```
