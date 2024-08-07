@@ -1,6 +1,7 @@
 # Use TailwindCSS in Vue Cli with Vue2
 
 [Reference](https://blog.csdn.net/zqd_java/article/details/136568490)
+[禁用 preflight style](https://github.com/tailwindlabs/tailwindcss/pull/7742)
 
 ## Install
 
